@@ -1,7 +1,9 @@
 package com.azubike.ellipsis.services;
 
-import com.azubike.ellipsis.dto.CustomerRegistrationRequest;
+import com.azubike.clients.dto.NotificationClientRequest;
 import com.azubike.clients.fraud.FraudClient;
+import com.azubike.clients.notification.NotificationClient;
+import com.azubike.ellipsis.dto.CustomerRegistrationRequest;
 import com.azubike.ellipsis.model.Customer;
 import com.azubike.ellipsis.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +20,8 @@ public class CustomerService {
     private final RestTemplate restTemplate;
 
     private final FraudClient fraudClient;
+
+    private final NotificationClient notificationClient;
 
     @Transactional
     public void registerCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
@@ -37,5 +41,9 @@ public class CustomerService {
         }
 
         // todo send notification
+        final NotificationClientRequest notificationClientRequest = NotificationClientRequest.builder().
+                toCustomerEmail(customer.getEmail()).toCustomerId(customer.getId()).build();
+
+        notificationClient.notifyCustomer(notificationClientRequest);
     }
 }
