@@ -1,4 +1,4 @@
-package com.azubike.ellpisis.dto;
+package com.azubike.ellipsis.fraud.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
