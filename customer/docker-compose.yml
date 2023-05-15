@@ -1,0 +1,41 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD : userpass
+      POSTGRES_USER: admin
+      PGDATA: /data/postgres
+    ports:
+      - ${DB_PORT:-5432}:5432
+    volumes:
+      - postgres:/data/postgres
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL:-admin@richard.com}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - 5050:80
+    networks:
+      - postgres
+
+volumes:
+  postgres:
+  pgadmin:
+
+networks:
+  postgres:
+    driver: bridge
+
+
+
+
