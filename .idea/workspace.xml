@@ -4,14 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7699f631-4d3e-4f1b-931a-01af4ffd87de" name="Changes" comment="" />
+    <list default="true" id="7699f631-4d3e-4f1b-931a-01af4ffd87de" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/FraudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/controller/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/controller/FraudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/dto/FraudCheckResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/dto/FraudCheckResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/model/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/model/FraudCheckHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/repository/FraudCheckHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/repository/FraudCheckHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/service/FraudCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/service/FraudCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PnoPdCfZ3y3uPHoJbJjtwwgmOs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -21,11 +47,67 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "38dc04e693e46e4c45dc35a21695ce06"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.azubike.ellpisis.dto" />
+      <recent name="com.azubike.ellipsis.services" />
+      <recent name="com.azubike.ellipsis.dto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.FraudApplication">
+    <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="customer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellipsis.CustomerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azubike.ellipsis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FraudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="fraud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellpisis.FraudApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azubike.ellpisis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.FraudApplication" />
+        <item itemvalue="Spring Boot.CustomerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -34,7 +116,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684102186488</updated>
+      <workItem from="1684102187950" duration="2404000" />
+      <workItem from="1684104706474" duration="12425000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
