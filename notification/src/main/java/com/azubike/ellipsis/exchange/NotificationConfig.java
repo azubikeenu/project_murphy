@@ -1,4 +1,4 @@
-package com.azubike.ellipsis.exchangers;
+package com.azubike.ellipsis.exchange;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
