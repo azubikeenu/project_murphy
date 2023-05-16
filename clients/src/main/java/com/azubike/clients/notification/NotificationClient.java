@@ -1,12 +1,14 @@
-package com.azubike.clients.fraud;
+package com.azubike.clients.notification;
 
+import com.azubike.clients.dto.NotificationClientRequest;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(value = "notification", path = "/api/v1/notifications")
 
 public interface NotificationClient {
-    @PostMapping("{customerId}/{customerEmail}")
-     void notifyCustomer(@PathVariable("customerId") Integer customerId, @PathVariable("customerEmail") String customerEmail);
+    @PostMapping
+    public void notifyCustomer(@RequestBody NotificationClientRequest notificationClientRequest);
+
 }

@@ -1,7 +1,7 @@
 package com.azubike.ellpisis.controller;
 
 
-import com.azubike.ellpisis.dto.FraudCheckResponse;
+import com.azubike.clients.dto.FraudCheckResponse;
 import com.azubike.ellpisis.service.FraudCheckService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +21,7 @@ public class FraudController {
     @GetMapping(value = "{customerId}")
     public ResponseEntity<FraudCheckResponse> isFraudster(@PathVariable("customerId") Integer customerId) {
         final boolean isFraudulentCustomer = fraudCheckService.isFraudulentCustomer(customerId);
-        log.info("fraud check request for customer {}" , customerId);
+        log.info("fraud check request for customer {}", customerId);
         return ResponseEntity.ok(FraudCheckResponse.builder().isFraudulent(isFraudulentCustomer).build());
     }
 }

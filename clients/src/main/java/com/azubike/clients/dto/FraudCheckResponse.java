@@ -1,4 +1,4 @@
-package com.azubike.clients.fraud.dto;
+package com.azubike.clients.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
