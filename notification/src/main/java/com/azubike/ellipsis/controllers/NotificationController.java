@@ -1,7 +1,7 @@
-package com.azubike.ellpsis.controllers;
+package com.azubike.ellipsis.controllers;
 
-import com.azubike.ellpsis.dto.NotificationClientRequest;
-import com.azubike.ellpsis.services.NotificationService;
+import com.azubike.ellipsis.dto.NotificationClientRequest;
+import com.azubike.ellipsis.services.NotificationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

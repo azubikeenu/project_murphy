@@ -5,13 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7699f631-4d3e-4f1b-931a-01af4ffd87de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api_gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_gateway/src/main/java/com/azubike/ellipsis/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_gateway/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amqp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/AmqpApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/config/RabbitmqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/producer/RabbitProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/NotificationApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/exchangers/NotificationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/azubike/ellpisis/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/azubike/ellipsis/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/FraudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/controller/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/controller/FraudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/model/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/model/FraudCheckHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/repository/FraudCheckHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/repository/FraudCheckHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/service/FraudCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/service/FraudCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/NotificationApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/controllers/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/controllers/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/dto/NotificationClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/dto/NotificationClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/model/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/repository/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/repository/NotificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/services/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +68,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
+    "last_directory_selection": "C:/Users/Azubike/Documents/java_workspace/spring_msc_app/amqp/src/main/java/com/azubike/ellpisis",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "03df198d3854722d9232e4db6857e952"
+    "spring.configuration.checksum": "ae4d368428299aac5b89ebe91fd3ae07"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.azubike.ellpisis.dto" />
@@ -101,10 +122,10 @@
     </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellpisis.EurekaServerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellipsis.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.azubike.ellpisis.*" />
+          <option name="PATTERN" value="com.azubike.ellipsis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,10 +135,10 @@
     </configuration>
     <configuration name="FraudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="fraud" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellpisis.FraudApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellipsis.FraudApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.azubike.ellpisis.*" />
+          <option name="PATTERN" value="com.azubike.ellipsis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,10 +148,10 @@
     </configuration>
     <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="notification" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellpsis.NotificationApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azubike.ellipsis.NotificationApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.azubike.ellpsis.*" />
+          <option name="PATTERN" value="com.azubike.ellipsis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.NotificationApplication" />
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.FraudApplication" />
-        <item itemvalue="Spring Boot.NotificationApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
@@ -158,7 +179,8 @@
       <updated>1684102186488</updated>
       <workItem from="1684102187950" duration="2404000" />
       <workItem from="1684104706474" duration="30168000" />
-      <workItem from="1684234132607" duration="12879000" />
+      <workItem from="1684234132607" duration="13754000" />
+      <workItem from="1684253016232" duration="6760000" />
     </task>
     <servers />
   </component>

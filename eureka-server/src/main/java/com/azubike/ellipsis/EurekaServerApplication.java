@@ -1,4 +1,4 @@
-package com.azubike.ellpisis;
+package com.azubike.ellipsis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

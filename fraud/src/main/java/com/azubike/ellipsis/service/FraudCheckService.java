@@ -1,7 +1,7 @@
-package com.azubike.ellpisis.service;
+package com.azubike.ellipsis.service;
 
-import com.azubike.ellpisis.model.FraudCheckHistory;
-import com.azubike.ellpisis.repository.FraudCheckHistoryRepository;
+import com.azubike.ellipsis.model.FraudCheckHistory;
+import com.azubike.ellipsis.repository.FraudCheckHistoryRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

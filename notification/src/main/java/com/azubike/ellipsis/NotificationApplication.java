@@ -1,14 +1,17 @@
-package com.azubike.ellpisis;
+package com.azubike.ellipsis;
 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {"com.azubike.ellipsis", "com.azubike.amqp"}
+)
 @EnableEurekaClient
-public class FraudApplication {
+public class NotificationApplication {
     public static void main(String[] args) {
-        SpringApplication.run(FraudApplication.class, args);
+        SpringApplication.run(NotificationApplication.class, args);
     }
+
 }

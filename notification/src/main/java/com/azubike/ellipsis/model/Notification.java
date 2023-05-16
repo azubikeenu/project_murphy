@@ -1,4 +1,4 @@
-package com.azubike.ellpsis.model;
+package com.azubike.ellipsis.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

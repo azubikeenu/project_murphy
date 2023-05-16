@@ -35,9 +35,22 @@ services:
     ports:
       - 9411:9411
 
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: spring-rabbitmq
+    ports:
+      - 5673:5672
+      - 15673:15672
+    volumes:
+      - rabbit-volume:/var/lib/rabbitmq/mnesia rabbitmq:management
+    restart: unless-stopped
+
+
 volumes:
   postgres:
   pgadmin:
+  rabbit-volume:
 
 networks:
   postgres:

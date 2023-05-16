@@ -1,8 +1,8 @@
-package com.azubike.ellpsis.services;
+package com.azubike.ellipsis.services;
 
-import com.azubike.ellpsis.dto.NotificationClientRequest;
-import com.azubike.ellpsis.model.Notification;
-import com.azubike.ellpsis.repository.NotificationRepository;
+import com.azubike.ellipsis.dto.NotificationClientRequest;
+import com.azubike.ellipsis.model.Notification;
+import com.azubike.ellipsis.repository.NotificationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

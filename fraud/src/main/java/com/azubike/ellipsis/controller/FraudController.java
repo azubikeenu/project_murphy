@@ -1,8 +1,8 @@
-package com.azubike.ellpisis.controller;
+package com.azubike.ellipsis.controller;
 
 
 import com.azubike.clients.dto.FraudCheckResponse;
-import com.azubike.ellpisis.service.FraudCheckService;
+import com.azubike.ellipsis.service.FraudCheckService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
