@@ -27,13 +27,13 @@ public class NotificationConfig {
 
    @Bean
     TopicExchange internalTopicExchange(){
-      return new TopicExchange(internalExchange , true , false );
+      return new TopicExchange(getInternalExchange() , true , false );
    }
 
 
    @Bean
    public Queue notificationQueue(){
-       return new Queue(notification , true ,  false , false );
+       return new Queue(getNotification() , true ,  false , false );
    }
 
    @Bean

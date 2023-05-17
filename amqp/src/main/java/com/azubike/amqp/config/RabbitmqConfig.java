@@ -26,20 +26,6 @@ public class RabbitmqConfig {
     }
 
     @Bean
-    SimpleRabbitListenerContainerFactory createListener (){
-        final SimpleRabbitListenerContainerFactory simpleRabbitListenerContainerFactory = new SimpleRabbitListenerContainerFactory();
-        simpleRabbitListenerContainerFactory.setConnectionFactory(connectionFactory);
-        simpleRabbitListenerContainerFactory.setMaxConcurrentConsumers(10);
-        // this will start with 5 consumers
-        simpleRabbitListenerContainerFactory.setConcurrentConsumers(5);
-        simpleRabbitListenerContainerFactory.setAutoStartup(true);
-        simpleRabbitListenerContainerFactory.setMessageConverter(messageConverter());
-        // this prevents requeue of message on exception
-        simpleRabbitListenerContainerFactory.setDefaultRequeueRejected(false);
-        return simpleRabbitListenerContainerFactory;
-    }
-
-    @Bean
     public MessageConverter messageConverter(){
         ObjectMapper objectMapper = JsonMapper.builder().findAndAddModules().build();
         return new Jackson2JsonMessageConverter(objectMapper);

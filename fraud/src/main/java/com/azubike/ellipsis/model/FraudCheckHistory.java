@@ -1,18 +1,16 @@
 package com.azubike.ellipsis.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
 @Entity
 public class FraudCheckHistory {
@@ -23,5 +21,5 @@ public class FraudCheckHistory {
     private Integer customerId;
     private Boolean isFraudStar;
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    private  LocalDateTime createdAt;
 }

@@ -1,15 +1,14 @@
 package com.azubike.ellipsis.services;
 
+import com.azubike.amqp.producer.RabbitProducer;
 import com.azubike.clients.dto.NotificationClientRequest;
 import com.azubike.clients.fraud.FraudClient;
-import com.azubike.clients.notification.NotificationClient;
 import com.azubike.ellipsis.dto.CustomerRegistrationRequest;
 import com.azubike.ellipsis.model.Customer;
 import com.azubike.ellipsis.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Objects;
 
@@ -17,11 +16,8 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    private final RestTemplate restTemplate;
-
     private final FraudClient fraudClient;
-
-    private final NotificationClient notificationClient;
+    private final RabbitProducer producer;
 
     @Transactional
     public void registerCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
@@ -30,9 +26,7 @@ public class CustomerService {
                 .firstName(customerRegistrationRequest.firstName())
                 .lastName(customerRegistrationRequest.lastName()).build();
         customerRepository.saveAndFlush(customer);
-        //todo check if email is valid
 
-        //todo check if email is not taken
         final var response = fraudClient.isFraudster(customer.getId());
         var fraudCheckResponse = response.getBody();
 
@@ -40,10 +34,9 @@ public class CustomerService {
             throw new IllegalArgumentException("Customer is fraudulent!!!");
         }
 
-        // todo send notification
         final NotificationClientRequest notificationClientRequest = NotificationClientRequest.builder().
-                toCustomerEmail(customer.getEmail()).toCustomerId(customer.getId()).build();
+                toCustomerEmail(customer.getEmail()).toCustomerId(customer.getId()).sender("Richard").message("Welcome in").build();
+        producer.publish(notificationClientRequest, "internal-exchange", "internal.notification.routing-key");
 
-        notificationClient.notifyCustomer(notificationClientRequest);
     }
 }

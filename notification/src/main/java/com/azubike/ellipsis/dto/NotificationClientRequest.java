@@ -10,12 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class NotificationClientRequest {
-
     private String message;
-
     private String sender;
-
     private String toCustomerEmail;
-
     private Integer toCustomerId;
 }

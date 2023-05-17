@@ -5,30 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7699f631-4d3e-4f1b-931a-01af4ffd87de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/amqp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/AmqpApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/config/RabbitmqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/producer/RabbitProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/NotificationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/exchangers/NotificationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/listeners/NotificationListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/config/RabbitmqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/config/RabbitmqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api_gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api_gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/azubike/ellpisis/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/azubike/ellipsis/EurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/FraudApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/controller/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/controller/FraudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/model/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/model/FraudCheckHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/repository/FraudCheckHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/repository/FraudCheckHistoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellpisis/service/FraudCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/service/FraudCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/CustomerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/model/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/model/FraudCheckHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/NotificationApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/controllers/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/controllers/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/dto/NotificationClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/dto/NotificationClientRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/model/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/repository/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/repository/NotificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellpsis/services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/services/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/dto/NotificationClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/dto/NotificationClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/exchange/NotificationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/exchange/NotificationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/model/Notification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,12 +153,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.CustomerApplication" />
+      <item itemvalue="Spring Boot.FraudApplication" />
+      <item itemvalue="Spring Boot.NotificationApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.NotificationApplication" />
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.FraudApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
     </recent_temporary>
@@ -180,7 +181,7 @@
       <workItem from="1684102187950" duration="2404000" />
       <workItem from="1684104706474" duration="30168000" />
       <workItem from="1684234132607" duration="13754000" />
-      <workItem from="1684253016232" duration="6760000" />
+      <workItem from="1684253016232" duration="15963000" />
     </task>
     <servers />
   </component>
@@ -197,5 +198,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/services/CustomerService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
