@@ -25,12 +25,13 @@ public class CustomerService {
                 .email(customerRegistrationRequest.email())
                 .firstName(customerRegistrationRequest.firstName())
                 .lastName(customerRegistrationRequest.lastName()).build();
-        customerRepository.saveAndFlush(customer);
+        customerRepository.saveAndFlush(customer); // ensures that the customer is persisted and the persisted object is returned
 
         final var response = fraudClient.isFraudster(customer.getId());
         var fraudCheckResponse = response.getBody();
 
         if (Objects.requireNonNull(fraudCheckResponse).isFraudulent()) {
+            //TODO create a custom exception and handle with a global error handler
             throw new IllegalArgumentException("Customer is fraudulent!!!");
         }
 

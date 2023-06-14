@@ -1,0 +1,144 @@
+ ============================================
+ SERVICE DISCOVERY AND SERVICE REGISTRY
+ ==============================================
+ The process of automatically detecting devices and services on a network is called "Service Discovery"
+ Devices are called Microservices clients or Eureka Clients and the Discovery Service or the machine that handles the
+ Registering of services is called the Eureka server, It knows all client application that are running on each port and IP addresses
+
+ Whenever a service needs to talk to another service , they basically lookup the eureka server by sending a Service Discovery Request
+ and the Eureka server sends back the address to the client/service
+
+ One of the caveats of using Eureka Server is that it introduces a single point of failure
+
+ For eureka server , Spring cloud uses
+
+  <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+         </dependency>
+
+
+For clients
+
+ <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+
+
+      An example of using service discovery for msc communication is
+
+      var response = restTemplate.getForObject("http://APPLICATION_NAME/uri", ResponseClass.class , [optional path-params])
+
+      to configure RestTemplate to perform loadbalancing
+
+     @Configuration
+     public class RestTemplateConfig {
+         @Bean
+         @LoadBalanced
+         public RestTemplate restTemplate(){
+         return new RestTemplate()
+         }
+
+      }
+
+
+========================================================
+                SPRING OPEN_FEIGN
+ =======================================================
+
+ OpenFeign is an HttpBased request binder that abstracts communication between microservices . It works by processing annotations
+ into an templatized request
+
+
+  <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-openfeign</artifactId>
+         </dependency>
+
+  Example
+
+1)
+  @FeignClient(value = "fraud", path = "/api/v1/fraud-check")
+  public interface FraudClient {
+      @GetMapping(value = "{customerId}")
+      ResponseEntity<FraudCheckResponse> isFraudster(@PathVariable("customerId") Integer customerId);
+  }
+
+2)
+  @FeignClient("fraud")
+  public interface FraudClient {
+      @RequestMapping(method = RequestMapping.GET , value = " "/api/v1/fraud-check/{customerId}")
+      ResponseEntity<FraudCheckResponse> isFraudster(@PathVariable("customerId") Integer customerId);
+  }
+
+
+  At the main class of the client consuming the feign client add the annotation
+  @EnableFeignClients(basePackages = "com.azubike.clients")
+
+  to use fraudClient
+
+  const response = fraudClient.isFraudStar(customerId)
+
+
+  ===============================================
+  SPRING CLOUD SLEUTH AND ZIPKIN
+  ================================================
+
+  Spring Cloud Sleuth provides Spring Boot auto-configuration for distributed tracing.
+  NB . starting with spring boot 3.* and spring cloud newer version
+  distributed tracing has been moved  to  Micrometer Tracing [https://micrometer.io/docs/tracing]
+
+
+  Adds trace and span ids to the Slf4J MDC [Mapped Diagnostic Context], so you can extract all the logs
+  from a given trace or span in a log aggregator such as .
+
+  Instruments common ingress and egress points from Spring applications (servlet filter, rest template, scheduled actions, message
+  channels, feign client).
+
+  If spring-cloud-sleuth-zipkin is available then the app will generate and report Zipkin-compatible traces via HTTP.
+  By default it sends them to a Zipkin collector
+  service on localhost (port 9411). Configure the location of the service using spring.zipkin.baseUrl.
+
+  Zipkin is a distributed tracing system that allows us gather timing data that is require to troubleshoot and stop latency problems
+  in service architectures
+
+  For a request , the trace-id remains the same through out the entire lifecycle, while the span-id changes from service to service
+
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-starter-sleuth</artifactId>
+          </dependency>
+
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+          </dependency>
+
+    ==========================================================
+                 LOAD BALANCERS
+    ==========================================================
+    Load balancers create a single point of entry to our application , acts as a proxy , and also helps distribute traffic
+    across different microservices
+     Some of the concerns when setting up a load balancer includes
+     TLS
+     Certificate Management
+     Security/Authentication
+     High Availability and Health Checks
+     Logging
+     Caching
+     Path Based Routing
+
+
+     ===============================================
+     SPRING CLOUD GATEWAY
+     ==============================================
+     Spring handles Api Gateway and load balancing using the Spring Cloud Gateway .This acts as the single point of entry to
+     our applications and addresses cross cutting concerns such as monitoring ,resiliency and  security
+
+====================================================
+AMQP(Advanced Message Queuing Protocol)
+=====================================================
+This allows client applications to communicate with conforming message brokers
+Message Brokers receive messages from  publishers and route them to consumers

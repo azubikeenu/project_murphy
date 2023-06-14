@@ -24,12 +24,10 @@ public class NotificationConfig {
     @Value("${rabbitmq.routing-keys.internal-notification}")
     private String internalNotification;
 
-
    @Bean
     TopicExchange internalTopicExchange(){
       return new TopicExchange(getInternalExchange() , true , false );
    }
-
 
    @Bean
    public Queue notificationQueue(){

@@ -27,6 +27,7 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!-- Spring boot dependencies BOM -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -34,6 +35,7 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
+            <!--Spring cloud dependencies BOM -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -48,7 +50,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -62,6 +63,7 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <!-- Spring boot maven plugin -->
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot-dependencies.version}</version>
@@ -73,7 +75,6 @@
                         </execution>
                     </executions>
                 </plugin>
-
             </plugins>
         </pluginManagement>
         <plugins>

@@ -15,7 +15,6 @@ public class FraudCheckService{
         fraudCheckHistoryRepository.save(FraudCheckHistory.builder()
                 .isFraudStar(false)
                 .customerId(customerId).build());
-
         return false;
     }
 
