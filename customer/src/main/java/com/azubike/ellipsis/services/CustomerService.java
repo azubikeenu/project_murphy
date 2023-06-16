@@ -34,7 +34,6 @@ public class CustomerService {
             //TODO create a custom exception and handle with a global error handler
             throw new IllegalArgumentException("Customer is fraudulent!!!");
         }
-
         final NotificationClientRequest notificationClientRequest = NotificationClientRequest.builder().
                 toCustomerEmail(customer.getEmail()).toCustomerId(customer.getId()).sender("Richard").message("Welcome in").build();
         producer.publish(notificationClientRequest, "internal-exchange", "internal.notification.routing-key");

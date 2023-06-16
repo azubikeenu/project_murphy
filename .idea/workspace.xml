@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7699f631-4d3e-4f1b-931a-01af4ffd87de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_gateway/src/main/resources/application-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/resources/application-docker.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/config/RabbitmqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/src/main/java/com/azubike/amqp/config/RabbitmqConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/dto/FraudCheckResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api_gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/azubike/ellipsis/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/model/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/model/FraudCheckHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/service/FraudCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/azubike/ellipsis/service/FraudCheckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/exchange/NotificationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/azubike/ellipsis/exchange/NotificationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +43,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="enabledProfiles">
+      <list>
+        <option value="build-docker-image" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="2PnoPdCfZ3y3uPHoJbJjtwwgmOs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,12 +68,13 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
     "last_directory_selection": "C:/Users/Azubike/Documents/java_workspace/spring_msc_app/amqp/src/main/java/com/azubike/ellpisis",
+    "last_opened_file_path": "C:/Users/Azubike/Documents/java_workspace/spring_msc_app/fraud/src/main/resources",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "9090cafaebb0e6c2f9a207d01c0d7935"
+    "spring.configuration.checksum": "7837d5ae24edd0afb50020752eb43413"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -70,6 +85,13 @@
       <recent name="com.azubike.ellpisis.dto" />
       <recent name="com.azubike.ellipsis.services" />
       <recent name="com.azubike.ellipsis.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Azubike\Documents\java_workspace\spring_msc_app\fraud\src\main\resources" />
+      <recent name="C:\Users\Azubike\Documents\java_workspace\spring_msc_app\notification\src\main\resources" />
+      <recent name="C:\Users\Azubike\Documents\java_workspace\spring_msc_app\customer\src\main\resources" />
+      <recent name="C:\Users\Azubike\Documents\java_workspace\spring_msc_app\eureka-server\src\main\resources" />
+      <recent name="C:\Users\Azubike\Documents\java_workspace\spring_msc_app\api_gateway\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Azubike\Documents\java_workspace\spring_msc_app" />
@@ -179,7 +201,9 @@
       <workItem from="1684253016232" duration="16401000" />
       <workItem from="1684778255718" duration="9888000" />
       <workItem from="1686579865270" duration="377000" />
-      <workItem from="1686725707666" duration="19901000" />
+      <workItem from="1686725707666" duration="24373000" />
+      <workItem from="1686846768794" duration="4534000" />
+      <workItem from="1686851857335" duration="13396000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,7 @@ spring:
       ddl-auto: create-drop
     show-sql: true
   rabbitmq:
-    addresses: localhost:5673
+    addresses: localhost:5672
 
 eureka:
   client:

@@ -34,18 +34,97 @@ services:
     container_name: zipkin
     ports:
       - 9411:9411
+    networks:
+      - spring_network
 
 
   rabbitmq:
     image: rabbitmq:management
-    container_name: spring-rabbitmq
+    container_name: rabbitmq
     ports:
-      - 5673:5672
-      - 15673:15672
+      - "5672:5672"
+      - "15673:15672"
     volumes:
       - rabbit-volume:/var/lib/rabbitmq/mnesia rabbitmq:management
     restart: unless-stopped
+    networks:
+      - spring_network
 
+
+  eureka-server:
+    image: richebony/eureka-server:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    depends_on:
+      - zipkin
+    networks:
+      - spring_network
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+
+  api_gateway:
+    image: richebony/api_gateway:latest
+    container_name: api_gateway
+    ports:
+      - "8083:8083"
+    depends_on:
+      - zipkin
+      - eureka-server
+    networks:
+      - spring_network
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  customer :
+    image : richebony/customer:latest
+    container_name: customer
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - postgres
+      - spring_network
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+      - eureka-server
+
+  fraud:
+    image: richebony/fraud:latest
+    container_name: fraud
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - postgres
+      - spring_network
+    depends_on:
+      - zipkin
+      - eureka-server
+      - postgres
+      - rabbitmq
+
+
+  notification:
+    image: richebony/notification:latest
+    container_name: notification
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - postgres
+      - spring_network
+    depends_on:
+      - zipkin
+      - eureka-server
+      - postgres
+      - rabbitmq
 
 volumes:
   postgres:
@@ -54,6 +133,8 @@ volumes:
 
 networks:
   postgres:
+    driver: bridge
+  spring_network:
     driver: bridge
 
 

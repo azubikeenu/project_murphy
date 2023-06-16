@@ -6,13 +6,13 @@ spring:
     name: customer
 
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://zipkin:9411
 
 
   datasource:
     username: 'admin'
     password: 'userpass'
-    url: jdbc:postgresql://localhost:5432/customer
+    url: jdbc:postgresql://postgres:5432/customer
   jpa:
     properties:
       hibernate:
@@ -24,11 +24,11 @@ spring:
 
 
   rabbitmq:
-    addresses: localhost:5672
+    addresses: rabbitmq:5672
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
