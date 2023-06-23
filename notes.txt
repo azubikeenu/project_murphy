@@ -147,7 +147,7 @@ Message Brokers receive messages from  publishers and route them to consumers
 ==========================================
         DOCKER
  =========================================
-Docker is a linux runtime environment which is used to run containers, They facilitate easy
+Docker is a linux runtime environment which is used to run containers, They facilitate easyB
 building and shipment of container , they create an agnostic environment where an instance
 of your application can be run .Docker greatly supports "Build once and run everywhere"
 
@@ -155,4 +155,17 @@ Containers are an instance of our running application or an instance of an Image
 While an image contains set of instructions ,application source code and libraries needed to
 build containers,Images are blueprints for running containers
 
-mvn clean package -P[profile-name] 
+mvn clean package -P[profile-name]
+
+
+================================================
+               KUBERNETES
+ ================================================
+
+ Kubernetes is an application orchestrator ,It deploys and manages our containers
+
+
+ ==========================================================
+            SERVICE DISCOVERY WITH KUBERNETES
+ ==========================================================
+Basically service discovery is a mechanism for mcs to locate each other in a network

@@ -5,12 +5,12 @@ spring:
     name: notification
 
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://zipkin:9411
 
   datasource:
     username: 'admin'
     password: 'userpass'
-    url: jdbc:postgresql://localhost:5432/notification
+    url: jdbc:postgresql://postgres:5432/notification
   jpa:
     properties:
       hibernate:
@@ -20,16 +20,7 @@ spring:
       ddl-auto: create-drop
     show-sql: true
   rabbitmq:
-    addresses: localhost:5672
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    fetch-registry: true
-    register-with-eureka: true
-    #### this is line is added because we are delegating the service discovery to kubernetes
-    enabled: false
+    addresses: rabbitmq:5672
 
 
 rabbitmq :

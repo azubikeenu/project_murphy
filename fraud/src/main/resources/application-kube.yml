@@ -21,12 +21,3 @@ spring:
       ddl-auto: create-drop
     show-sql: true
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
-    fetch-registry: true
-    register-with-eureka: true
-    #### this is line is added because we are delegating the service discovery to kubernetes
-    enabled: false
-

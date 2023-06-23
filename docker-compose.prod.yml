@@ -1,0 +1,115 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD : userpass
+      POSTGRES_USER: admin
+      PGDATA: /data/postgres
+    ports:
+      - ${DB_PORT:-5432}:5432
+    volumes:
+      - postgres:/data/postgres
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL:-admin@richard.com}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - 5050:80
+    networks:
+      - postgres
+
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - 9411:9411
+    networks:
+      - spring_network
+
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15673:15672"
+    volumes:
+      - rabbit-volume:/var/lib/rabbitmq/mnesia rabbitmq:management
+    restart: unless-stopped
+    networks:
+      - spring_network
+
+#  customer :
+#    image : richebony/customer:latest
+#    container_name: customer
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - postgres
+#      - spring_network
+#    depends_on:
+#      - zipkin
+#      - postgres
+#      - rabbitmq
+#      - eureka-server
+#
+#  fraud:
+#    image: richebony/fraud:latest
+#    container_name: fraud
+#    ports:
+#      - "8081:8081"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - postgres
+#      - spring_network
+#    depends_on:
+#      - zipkin
+#      - eureka-server
+#      - postgres
+#      - rabbitmq
+#
+#
+#  notification:
+#    image: richebony/notification:latest
+#    container_name: notification
+#    ports:
+#      - "8082:8082"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - postgres
+#      - spring_network
+#    depends_on:
+#      - zipkin
+#      - eureka-server
+#      - postgres
+#      - rabbitmq
+
+volumes:
+  postgres:
+  pgadmin:
+  rabbit-volume:
+
+networks:
+  postgres:
+    driver: bridge
+  spring_network:
+    driver: bridge
+
+
+
+
